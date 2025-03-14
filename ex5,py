@@ -24,4 +24,4 @@ print(f"Após a troca: N1 = {n1}, N2 = {n2}")
 #n2 = int(input("Digite o segundo número: "))
 
 #n1, n2 = trocar_valores(n1, n2)
-#print(f"Após a troca: N1 = {n1}, N2 = {n2}")
+#print(f"Após a troca: N1 = {n2}, N2 = {n1)
