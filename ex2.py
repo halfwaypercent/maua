@@ -1,8 +1,8 @@
-def calcular_media(n1, n2):
-    return (n1 + n2) / 2
+def cosh(x):
+    e = 2.718
+    x = (e**x + e**(-x)) / 2
 
-n1 = float(input("Digite a primeira nota: "))
-n2 = float(input("Digite a segunda nota: "))
+    return (x)
 
-media = calcular_media(n1, n2)
-print(f"Média: {media}")
+x=float(input("digite o numero para receber seu cosseno hiperbolico: "))
+print("O cosseno hiperbolico de",x,"é",cosh(x))
