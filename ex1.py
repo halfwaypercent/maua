@@ -1,14 +1,30 @@
-def formatar_tempo(horas, minutos, segundos):
-    
-    
-    print(f"{horas:02d}h{minutos:02d}m{segundos:02d}s")
+def bissexto(ano):
+    """
+    Verifica se um ano é bissexto.
 
-# Programa principal
+    Returns:
+        bool: True se o ano for bissexto, False caso contrário.
+    """
+    # Um ano é bissexto se não terminar em 00 e for divisível por 4
+    if ano % 100 != 0 and ano % 4 == 0:
+        return True
+    else:
+        # Um ano é bissexto se terminar em 00 e for divisível por 400
+        if ano % 100 == 0 and ano % 400 == 0:
+            return True
+        else:
+            # Caso contrário, não é bissexto
+              return False
+
+def main():
+    try:
+        ano = int(input("Digite um ano para verificar se é bissexto: "))
+        if bissexto(ano):
+            print(f"O ano {ano} é bissexto.")
+        else:
+            print(f"O ano {ano} não é bissexto.")
+    except ValueError:
+        print("Por favor, insira um número válido.")
+
 if __name__ == "__main__":
-    
-    horas = int(input("Digite a quantidade de horas: "))
-    minutos = int(input("Digite a quantidade de minutos: "))
-    segundos = int(input("Digite a quantidade de segundos: "))
-
-   
-    formatar_tempo(horas, minutos, segundos)
+    main()
